@@ -1,0 +1,390 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+button,
+summary {
+	cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+
+
+
+
+
+
+
+
+
+
+/* General */
+
+body {
+	color: var(--color-text);
+	background-color: var(--color-background);
+	margin: 0em;
+}
+
+
+
+
+img {
+	width: 100%;
+	right: 0;
+	left: 0;
+	display: block;
+}
+
+svg {
+	width: 2em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li,
+span {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+a:hover {
+	color: #d5001c;
+	transition: 0.2s ease-in-out;
+}
+
+/* Aanvullende stijl voor de models-header en knoppen */
+/* Aanvullende stijl voor de models-header en knoppen */
+/* Aanvullende stijl voor de models-header en knoppen */
+.models-header {
+    text-align: left;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 1em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+button {
+    height: 3em;
+    margin-bottom: 1em;
+    text-align: left;
+    font-size: 1em;
+    width: 100%; /* Breedte 100% voor de bovenste knop */
+}
+
+button.filter-button {
+    background-color: #494949; /* Donkerblauwe achtergrondkleur */
+    color: #fff; /* Witte tekstkleur */
+    border: #ffffff;
+}
+
+
+button.model-button {
+    width: 5em; /* Breedte 3em voor de onderste knop */
+    background-color: #fff; /* Witte achtergrondkleur */
+    color: #000; /* Zwarte tekstkleur */
+    border: 1px solid #000; /* Zwarte rand */
+}
+
+button.model-button::before {
+    content: '✖ '; /* Unicode voor een kruisje */
+}
+
+
+
+/* Headings */
+h1 {
+    font-size: 1.2em;
+    padding: 1em 0em 0.5em 1.2em; 
+    margin: 0em 0em 0em 0em;
+    background-color: rgb(235, 235, 235);
+
+}
+
+h2 {
+	font-size: 1.5em;
+	padding: 1em 0em 0em 1em;
+
+
+}
+
+h3 {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin: 0;
+	color: #ffffff;
+	margin: 1em 1.5em 0em 0.6em;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 0.6em 0.6em 0.6em 0.6em;
+}
+
+
+/* Navigation bar */
+/* Navigation bar */
+header {
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 999;
+	margin: 0em 0em 0em 0em;
+	padding: 1em 2em 1em 2em;
+}
+
+header nav {
+	display: flex;
+	height: 3.7em;
+	margin: 0em 0em 0em 0em;
+	padding: 0em 0em 1em 0em;
+	float: none;
+	position: absolute;
+	top: 2.5em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+}
+
+header nav a img {
+	width: 2.1em;
+	height: auto;
+	border: white;
+	margin: 0em 0em 0em 0em;
+	flex: 1;
+}
+
+header div img {
+	display: flex;
+	height: 2em;
+	right: 0;
+}
+.overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(255, 255, 255);
+	overflow-x: hidden;
+	transition: 0.5s;
+  }
+  
+  .overlay-content {
+	position: relative;
+	padding: 0.5em 1em;
+	width: 100%;
+	text-align: center;
+	margin-top: 2.5em;
+  }
+  
+  .overlay a {
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.5em;
+	color: #000000;
+	display: block;
+	transition: 0.3s;
+	margin: 1em 0;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	background-color: #ffffff; /* Light gray background */
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+	background-color: lightgray;
+  }
+  
+  .overlay .closebtn {
+	position: absolute;
+	right: 0.5em;
+	background-color: #ffffff;
+	font-size: 2.3em;
+	margin: 0em;
+	padding: 0.1em 0.1em 0em 0.1em; /* Padding inside the button */
+	border-radius: 0.1em; /* Rounded corners */
+  }
+  
+  .menu-button {
+	font-size: 1.2em;
+	cursor: pointer;
+  }
+  
+
+
+
+
+/* models */
+:root {
+	--main-text-color: #000000;
+	--link-color: #ffffff;
+	--link-hover-color: #d5001c;
+	--link-border-color: #ffffff;
+	--link-hover-border-color: #d5001c;
+	--background-color: #000;
+  }
+  
+  .models ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	grid-row-gap: 3em; /* Vergroot alleen de verticale gap */
+	margin: 0;
+	padding: 1em;
+	list-style: none;
+  }
+  
+  .models ul li {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
+	font-size: 1.2rem;
+  }
+  
+  .models ul li a {
+	display: block;
+	margin: 0;
+  }
+  
+  .models ul li section:nth-of-type(2) {
+	align-self: flex-end;
+  }
+  
+  .models ul li a:first-of-type {
+	color: var(--background-color);
+	background-color: var(--link-color);
+  }
+  
+  .models ul li a:first-of-type:hover {
+	background-color: var(--link-hover-color);
+	color: var(--background-color);
+	border-color: var(--link-hover-border-color);
+  }
+  
+  .models ul li a:nth-of-type(2):hover {
+	color: var(--link-hover-color);
+	border-color: var(--link-hover-border-color);
+  }
+  
+  .models ul li p {
+	font-size: 0.8em;
+	color: var(--main-text-color);
+	text-align: left;
+	margin: 0;
+  }
+
+/* footer */
+
+footer h2 {
+    font-size: 1.5em;
+}
+
+footer nav li:first-child {
+    border-top: 2px solid #000;
+}
+
+footer nav li:last-child {
+    border-bottom: 2px solid #000;
+}
+
+footer nav {
+    display: flex;
+    padding: 1em;
+    padding-top: 5em;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+footer ul {
+	padding-inline-start: 0;
+	padding-left: 1em;
+	margin-right: 2em;
+
+}
+
+footer nav li {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+footer nav a {
+    padding: 1em;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    margin: 0;
+}
+
+footer section ul:last-child li {
+    background-color: #f2f2f2;
+}
+
+footer p {
+    padding-left: 1em;
+}
+
+footer>section:last-of-type {
+    margin: 0;
+    padding: var(--padding); /* Let op: de variabele --padding moet elders in je CSS worden gedefinieerd */
+    padding-top: 2em;
+    padding-bottom: 5em;
+    background-color: #191f22;
+    color: #fff;
+}
+
+footer>section:last-of-type a {
+    color: #fff;
+    padding: 0;
+    text-decoration: underline;
+}
+
+/* Nieuwe CSS voor de buttons in de footer */
+footer section ul button {
+    background-color: rgb(43, 43, 43);
+    padding: 1em; /* Voeg een padding toe om de tekst heen */
+    margin: 0.5em;
+    border: none;
+}
+
+footer section ul button a {
+    text-decoration: none;
+    color: #fff; /* Aangepaste tekstkleur voor betere zichtbaarheid */
+    display: block;
+    margin: 0;
+    padding-left: 0.5em; /* Verplaats de tekst 0,5em naar rechts */
+}
