@@ -1,0 +1,812 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+button,
+summary {
+	cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+
+
+
+
+
+
+
+:root {
+	--color-text-light: #ffffff;
+	--color-background-light: #000000;
+	--color-text-dark: #000000;
+	--color-background-dark: #000000;
+  }
+  
+  body {
+	color: var(--color-text);
+	background-color: var(--color-background);
+	transition: background-color 0.5s, color 0.5s;
+  }
+  
+  body.bw-mode {
+	filter: grayscale(100%);
+  }
+  
+  /* Voeg dark mode toe */
+  body.dark-mode {
+	--color-text: var(--color-text-light);
+	--color-background: var(--color-background-dark);
+  }
+  
+  /* Voeg dit toe aan je bestaande CSS-stijlen */
+
+/* Voeg dit toe aan je bestaande CSS-stijlen */
+
+header {
+    background-color: var(--primary-color);
+    transition: background-color 0.5s;
+}
+
+body.dark-mode header {
+    background-color: var(--color-background-dark);
+}
+
+.overlay a {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+}
+
+body.dark-mode .overlay a {
+    color: var(--color-background-dark);
+    background-color: var(--secondary-color);
+}
+
+
+button#dark-mode-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 1em;
+    height: 3em;
+    text-align: left;
+    font-size: 1em;
+    width: 50%;
+	z-index: 999;
+
+}
+
+ 
+  body.dark-mode svg {
+	filter: invert(1);
+  }
+  
+
+body {
+	color: var(--color-text);
+	background-color: var(--color-background);
+	margin: 0em;
+	padding: 0em;
+}
+
+button {
+    height: 3em;
+    margin-bottom: 1em;
+    text-align: left;
+    font-size: 1em;
+    width: 100%; /* Breedte 100% voor de bovenste knop */
+}
+
+
+/* General */
+
+img {
+	width: 100%;
+	right: 0;
+	left: 0;
+	display: block;
+}
+
+svg {
+	width: 2em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li,
+span {
+	font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+a:hover {
+	color: #d5001c;
+	transition: 0.2s ease-in-out;
+}
+
+  /* Headings */
+
+:root {
+	--heading-2-font-size: 1.5em;
+	--heading-2-padding: 1em 0em 0em 1em;
+  
+	--heading-3-font-size: 2.5em;
+	--heading-3-font-weight: bold;
+	--heading-3-margin: 0;
+	--heading-3-color: #ffffff;
+	--heading-3-margin: 1em 1.5em 0em 0.6em;
+  
+	--heading-4-font-size: 1em;
+	--heading-4-margin: 0.6em 0.6em 0.6em 0.6em;
+  }
+  
+
+  h2 {
+	font-size: var(--heading-2-font-size);
+	padding: var(--heading-2-padding);
+  }
+  
+  h3 {
+	font-size: var(--heading-3-font-size);
+	font-weight: var(--heading-3-font-weight);
+	margin: var(--heading-3-margin);
+	color: var(--heading-3-color);
+  }
+  
+  h4 {
+	font-size: var(--heading-4-font-size);
+	margin: var(--heading-4-margin);
+  }
+  
+
+
+/* Navigation bar */
+:root {
+	--primary-color: #ffffff;
+	--secondary-color: lightgray;
+	--text-color: #000000;
+  }
+	
+  header {
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	width: 100%;
+	background-color: var(--primary-color);
+	z-index: 999;
+	margin: 0em 0em 0em 0em;
+	padding: 1em 2em 1em 2em;
+  }
+  
+  header nav {
+	display: flex;
+	height: 3.7em;
+	margin: 0em 0em 0em 0em;
+	padding: 0em 0em 1em 0em;
+	float: none;
+	position: absolute;
+	top: 2.5em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	align-items: center;
+  }
+  
+  header nav a img {
+	width: 2.1em;
+	height: auto;
+	border: white;
+	margin: 0em 0em 0em 0em;
+	flex: 1;
+  }
+  
+  header div img {
+	display: flex;
+	height: 2em;
+	right: 0;
+  }
+  
+  .overlay {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(255, 255, 255);
+	overflow-x: hidden;
+	transition: 0.5s;
+  }
+  
+  .overlay-content {
+	position: relative;
+	padding: 0.5em 1em;
+	width: 100%;
+	text-align: center;
+	margin-top: 2.5em;
+  }
+  
+  .overlay a {
+	text-decoration: none;
+	text-align: left;
+	font-size: 1.5em;
+	color: var(--text-color);
+	display: block;
+	transition: 0.3s;
+	margin: 1em 0;
+	padding: 0.5em;
+	border-radius: 0.3em;
+	background-color: var(--primary-color);
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+	background-color: var(--secondary-color);
+  }
+  
+  .overlay .closebtn {
+	position: absolute;
+	right: 0.5em;
+	background-color: var(--primary-color);
+	font-size: 2.3em;
+	margin: 0em;
+	padding: 0.1em 0.1em 0em 0.1em;
+	border-radius: 0.1em;
+  }
+  
+  .menu-button {
+	font-size: 1.2em;
+	cursor: pointer;
+  }
+  
+  /*carousel-home  */
+
+  :root {
+    --carousel-background: #ffffff;
+    --text-color: #ffffff;
+    --text-hover-color: red;
+    --indicator-default: #bbb;
+    --indicator-active: #c40000;
+}
+
+#carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: var(--carousel-background);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+}
+
+.text-container {
+    position: absolute;
+    bottom: 2em;
+    left: 0;
+    width: 100%;
+    padding: 1.5em;
+    box-sizing: border-box;
+}
+
+.text-container h3 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.7em;
+}
+
+#carousel-container h3:hover {
+    color: var(--text-hover-color);
+    cursor: pointer;
+}
+
+.text-container p {
+    margin: 0;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--indicator-default);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: var(--indicator-active);
+}
+
+
+/* Models homepage */
+:root {
+	--main-text-color: #ffffff;
+	--link-color: #ffffff;
+	--link-hover-color: #d5001c;
+	--link-border-color: #ffffff;
+	--link-hover-border-color: #d5001c;
+	--background-color: #000;
+  }
+  
+  .models ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+	gap: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+  
+  .models ul li {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
+	font-size: 1.2rem;
+  }
+
+  .models ul li a {
+	display: block;
+	margin: 0;
+  }
+  
+  .models ul li section:nth-of-type(2) {
+	align-self: flex-end;
+  }
+  
+  .models ul li h3 {
+	margin: 0; /* Verwijder standaardmarges van de h3 */
+	font-size: 1.5em;
+	font-weight: bold;
+	color: var(--main-text-color);
+	position: absolute;
+	bottom: 0.5em;
+	left: 0.5em;
+	transition: color 0.2s ease-in-out;
+  }
+  
+
+  .models ul li p {
+	font-size: 1.5em;
+	color: var(--main-text-color);
+  }
+  
+  
+  .models ul li a:first-of-type {
+	color: var(--background-color);
+	background-color: var(--link-color);
+  }
+  
+  .models ul li a:first-of-type:hover {
+	background-color: var(--link-hover-color);
+	color: var(--background-color);
+	border-color: var(--link-hover-border-color);
+  }
+  
+  .models ul li a:nth-of-type(2):hover {
+	color: var(--link-hover-color);
+	border-color: var(--link-hover-border-color);
+  }
+  
+  .models ul li h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0;
+	color: var(--main-text-color);
+	transition: color 0.2s ease-in-out;
+	
+  }
+  
+  .models ul li h3:hover {
+	color: var(--link-hover-color);
+  }
+  
+
+
+
+/* discover homepage */
+.discover {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.discover ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    scroll-behavior: smooth;
+    max-height: 27em;
+    display: flex;
+    overflow: hidden;
+    margin: 0em 1em 0em 1em;
+}
+
+.discover ul li {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+    flex-direction: column; /* Voeg dit toe om de <p> onder de afbeelding te plaatsen */
+}
+
+.discover > ul li:not(:first-child) {
+    margin-left: -50%;
+}
+
+.discover ul li a {
+    height: 50%;
+    width: auto;
+}
+
+.discover ul li img {
+    width: 50%;
+    height: 15em;
+}
+
+.discover ul li p {
+    width: 50%;
+    margin: 0;
+    padding: 0.5em;
+}
+
+/* bullet points nav */
+.discover nav ul {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.discover nav ul li {
+    width: 0.5em;
+    height: 0.5em;
+    display: block;
+    background-color: #f00;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.discover nav ul li a {
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+/* porche social*/ 
+section.social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-left: 0;
+	position: relative;
+	margin: 1em;
+}
+
+section.social h2 {
+	width: 100%;
+	order: 1;
+	padding: 0em 0em 0.5em 0.2em;
+
+}
+
+section.social a {
+	flex: 50% 1 1;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	display: block;
+	padding: 0.3em;
+	margin: 0;
+
+}
+
+
+
+
+section.social a:nth-child(2) {
+	flex: 100% 1 1;
+	order: 2;
+
+}
+
+section.social a:nth-child(3) {
+	order: 3;
+}
+
+section.social a:nth-child(4) {
+	order: 4;
+}
+
+
+
+/* service homepage */
+:root {
+    --service-background: #ffffff;
+    --text-color: #ffffff;
+    --text-hover-color: #ff0000;
+    --button-background: #ffffff;
+    --button-text-color: #000000;
+    --button-hover-background: #ff0000;
+    --button-hover-text-color: #ffffff;
+}
+
+section.service {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 0;
+    position: relative;
+    margin: 1em;
+    background-color: var(--service-background);
+}
+
+section.service h2 {
+    width: 100%;
+    order: 1;
+    padding: 0em 0em 0.5em 0em;
+}
+
+section.service a {
+    flex: 50% 1 1;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+section.service a:nth-child(2) {
+    flex: 100% 1 1;
+    order: 2;
+}
+
+section.service a:nth-child(3) {
+    order: 3;
+}
+
+section.service a:nth-child(4) {
+    order: 4;
+}
+
+section.service a p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: var(--text-color);
+    padding: 1em;
+    margin: 0;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+section.service a:hover p {
+    color: var(--text-hover-color);
+}
+
+#button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1em;
+}
+
+#button-container button {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    font-size: 1em;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+}
+
+#button-container button:hover {
+    background-color: var(--button-hover-background);
+    color: var(--button-hover-text-color);
+}
+
+:root {
+    --service-background-light: #ffffff;
+    --text-color-light: #ffffff;
+    --text-hover-color-light: #ff0000;
+    --button-background-light: #ffffff;
+    --button-text-color-light: #000000;
+    --button-hover-background-light: #ff0000;
+    --button-hover-text-color-light: #ffffff;
+
+    --service-background-dark: #000000;
+    --text-color-dark: #ffffff;
+    --text-hover-color-dark: #ff0000;
+    --button-background-dark: #000000;
+    --button-text-color-dark: #ffffff;
+    --button-hover-background-dark: #ff0000;
+    --button-hover-text-color-dark: #ffffff;
+}
+
+body.dark-mode section.service {
+    background-color: var(--service-background-dark);
+}
+
+body.dark-mode section.service h2 {
+    background-color: var(--service-background-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode section.service a p {
+    color: var(--text-color-dark);
+}
+
+body.dark-mode #button-container button {
+    background-color: var(--button-background-dark);
+    color: var(--button-text-color-dark);
+}
+
+body.dark-mode #button-container button:hover {
+    background-color: var(--button-hover-background-dark);
+    color: var(--button-hover-text-color-dark);
+}
+
+
+
+
+
+/* footer */
+
+body.dark-mode footer>section:last-of-type {
+    background-color: var(--footer-background-dark);
+    color: var(--footer-text-color-dark);
+}
+
+body.dark-mode footer nav a {
+    color: var(--footer-link-color-dark);
+}
+
+body.dark-mode footer section ul button {
+    background-color: var(--button-background-dark);
+    color: var(--button-text-color-dark);
+}
+
+
+:root {
+    --footer-border-color: #000;
+    --footer-background: #191f22;
+    --footer-text-color: #fff;
+    --footer-link-color: #000;
+    --footer-link-hover-color: #f2f2f2;
+    --button-background: rgb(43, 43, 43);
+    --button-text-color: #fff;
+    --button-hover-color: #f2f2f2;
+}
+
+footer h2 {
+    font-size: 1.5em;
+}
+
+footer nav li:first-child {
+    border-top: 2px solid var(--footer-border-color);
+}
+
+footer nav li:last-child {
+    border-bottom: 2px solid var(--footer-border-color);
+}
+
+footer nav {
+    display: flex;
+    padding: 1em;
+    padding-top: 5em;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+footer ul {
+    padding-inline-start: 0;
+    padding-left: 1em;
+    margin-right: 2em;
+}
+
+footer nav li {
+    border-top: 1px solid var(--footer-border-color);
+    border-bottom: 1px solid var(--footer-border-color);
+}
+
+footer nav a {
+    padding: 1em;
+    text-decoration: none;
+    color: var(--footer-link-color);
+    display: block;
+    margin: 0;
+}
+
+footer section ul:last-child li {
+    background-color: var(--footer-link-hover-color);
+}
+
+footer p {
+    padding-left: 1em;
+}
+
+footer>section:last-of-type {
+    margin: 0;
+    padding: var(--padding);
+    padding-top: 2em;
+    padding-bottom: 5em;
+    background-color: var(--footer-background);
+    color: var(--footer-text-color);
+}
+
+footer>section:last-of-type a {
+    color: var(--footer-text-color);
+    padding: 0;
+    text-decoration: underline;
+}
+
+/* Nieuwe CSS voor de buttons in de footer */
+footer section ul button {
+    background-color: var(--button-background);
+    padding: 1em;
+    margin: 0.5em;
+    border: none;
+}
+
+footer section ul button a {
+    text-decoration: none;
+    color: var(--button-text-color);
+    display: block;
+    margin: 0;
+    padding-left: 0.5em;
+}
+
+
